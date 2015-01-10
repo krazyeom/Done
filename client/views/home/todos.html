@@ -1,0 +1,54 @@
+<template name="todos">
+  <div class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">Todos</h3>
+    </div>
+    <div class="panel-body">
+      {{> todo}}
+    </div>
+  </div>
+</template>
+
+<template name="todo">
+  {{#if is_today}}
+    <div class="row">
+      <div class="col-md-12 col-xs-12" style="padding-right: 4px; padding-left: 1px; margin-left: 2px; margin-right: 2px; margin-bottom: 10px;">
+        <input type="text" id="new-todo" class="wide" />
+      </div>
+    </div>
+  {{/if}}
+  {{#if todos_count}}
+    {{#each todos}}
+      <div class="row">
+        <div class="col-md-3 col-xs-3">
+          <button class="btn btn-primary add">Add</button>
+        </div>
+          {{#if editing _id}}
+            <div class="col-md-9 col-xs-9" style="">
+              <input type="text" class="edit-input wide {{_id}}" value="{{todo}}"/>
+            </div>
+          {{else}}
+            <div class="todo col-md-9 col-xs-9">
+              <label id="{{_id}}">
+                {{todo}}
+              </label>
+            </div>
+          {{/if}}
+      </div>
+    {{/each}}
+  {{else}}
+    <div class="row">
+      <div class="col-md-12 col-xs-12" style="margin-bottom: 10px;">
+        일좀해라이놈아
+      </div>
+    </div>
+    {{#if is_today}}
+    {{else}}
+      <div class="row">
+        <div class="col-md-12 col-xs-12" style="padding-right:4px;padding-left:1px;margin-right:2px">
+          <input type="text" id="new-todo" class="wide" />
+        </div>
+      </div>
+    {{/if}}
+  {{/if}}
+</template>

@@ -1,0 +1,25 @@
+<template name="days">
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h3 class="panel-title">Days</h3>
+    </div>
+    <div class="panel-body">
+      {{> day}}
+    </div>
+  </div>
+</template>
+
+<template name="day">
+  <div class="row">
+    <div class="col-md-12 day {{selected}}">
+      All
+    </div>
+  </div>
+  {{#each days}}
+    <div class="row">
+      <div class="col-md-12 day {{selected}}" id="{{day}}">
+        {{day}}
+      </div>
+    </div>
+  {{/each}}
+</template>

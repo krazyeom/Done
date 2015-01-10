@@ -1,0 +1,22 @@
+button.add {
+  padding: 0;
+  margin-left: 0px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: #009587;
+  margin-right: 0px;
+}
+
+button.del {
+  padding: 0;
+  margin-left: 0px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: #ff5722 !important;
+  margin-right: 0px;
+}
+
