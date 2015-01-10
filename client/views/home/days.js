@@ -11,7 +11,6 @@ Template['day'].helpers({
   },
   selected: function() {
     var day = Session.get("selected_day");
-    if (day)
     var input = $("#" + day);
     var id = $(input).attr('id');
     return this.day === id ? 'bg-danger' : '';
