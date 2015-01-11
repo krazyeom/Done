@@ -16,9 +16,15 @@
     </div>
   </div>
   {{#each days}}
-    <div class="row">
-      <div class="col-md-12 day {{selected}}" id="{{day}}">
+    <div class="row" id="{{day}}">
+      <div class="col-md-6 col-xs-6 day {{selected}}">
         {{day}}
+      </div>
+      <div class="col-md-3 col-xs-3 {{selected}}">
+        {{intime}}
+      </div>
+      <div class="col-md-3 col-xs-3 {{selected}}">
+        {{outtime}}
       </div>
     </div>
   {{/each}}
