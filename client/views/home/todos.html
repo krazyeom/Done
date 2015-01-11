@@ -13,7 +13,7 @@
   {{#if is_today}}
     <div class="row">
       <div class="col-md-12 col-xs-12" style="padding-right: 4px; padding-left: 1px; margin-left: 2px; margin-right: 2px; margin-bottom: 10px;">
-        <input type="text" id="new-todo" class="wide" />
+        <input type="text" id="new-todo" class="wide" placeholder="Please enter a task."/>
       </div>
     </div>
   {{/if}}
@@ -25,7 +25,7 @@
         </div>
           {{#if editing _id}}
             <div class="col-md-9 col-xs-9" style="">
-              <input type="text" class="edit-input wide {{_id}}" value="{{todo}}"/>
+              <input type="text" class="edit-input wide {{_id}}" style="border: none; height: 25px; line-height: 25px;" value="{{todo}}"/>
             </div>
           {{else}}
             <div class="todo col-md-9 col-xs-9">
@@ -39,7 +39,7 @@
   {{else}}
     <div class="row">
       <div class="col-md-12 col-xs-12" style="margin-bottom: 10px;">
-        일좀해라이놈아
+        일좀해라 이놈아
       </div>
     </div>
   {{/if}}
