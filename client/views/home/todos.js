@@ -4,7 +4,7 @@ Template['todo'].helpers({
     if (day) {
       return Todos.find({done: 0, day: day}, {sort: {submitted: -1}});
     }
-    return Todos.find({done: 0});
+    return Todos.find({done: 0}, {sort: {submitted: -1}});
   },
   editing: function(_id) {
     // console.log(_id);
